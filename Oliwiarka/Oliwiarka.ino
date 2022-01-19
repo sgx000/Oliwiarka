@@ -39,17 +39,21 @@ const int pulseWeigh = 16;    //ml -> https://pl.aliexpress.com/item/10050019275
 
 
 int cnt = 0;
+int error_cnt = 0;
 
 
 
 int incomingByte = 0; 
 int outputingByte = 0;
+char psettings=0;       //print settings
 char str[255];
 char bfr[255];
 char c;
 char save = 0;
 char restore = 0;
 char* btName = "Oliwiarka";
+char suppress_enable = 0;
+char Neutral = 0;
 
 
 void setup() {
@@ -60,6 +64,7 @@ void setup() {
   Serial.println(btName);
   SerialBT.begin(btName); //Bluetooth device name
   //opState  = opCapacity - opState;
+
   
 }
 
@@ -83,6 +88,7 @@ void loop() {
     if (error) {
       Serial.print(F("deserializeJson() failed: "));
       Serial.println(error.f_str());
+      error_cnt++;
  
   }else{ 
 
@@ -102,6 +108,14 @@ void loop() {
             case 11:{
               Serial.println("Save settngs");    
               save = 1;
+            } break;
+            case 15:{
+              Serial.println("Supress lubrication");    
+              suppress_enable = 1;
+            } break;
+            case 16:{
+              Serial.println("Enable lubrication");    
+              suppress_enable = 0;
             } break;
             
           }
@@ -161,8 +175,9 @@ void loop() {
 
  
    if (firstTimer.isReady() ) {            // Check is ready a first timer
+    if(!suppress_enable){
       if(cnt == opTime){
-        if(opState > 0){
+        if(opState > 0 ){
         digitalWrite(22, LOW);  
         }
       }
@@ -176,6 +191,10 @@ void loop() {
         cnt = 0;
       }
       cnt++;
+      }else{
+
+        digitalWrite(22, HIGH);
+      }
       firstTimer.reset();
     }
  
@@ -185,7 +204,10 @@ void loop() {
       out["opDuration"] = opDuration;
       out["opState"] = opState;
       out["opCapacity"] = opCapacity;
+      out["error"] = error_cnt;
+      out["suppress"] = suppress_enable;
       out["NotSave"] = NotSave;
+      out["Neutral"] = Neutral;
       //serializeJson(out, bfr);
       serializeJson(out,SerialBT);
       SerialBT.write(0xd);
@@ -194,13 +216,14 @@ void loop() {
   
 }
 
-
+//suppress_enable
 void StorePreferences(){
       preferences.begin("Oliwiarka", false);
         preferences.putInt("opTime", opTime);
         preferences.putInt("opDuration", opDuration);
         preferences.putInt("opState", opState);
         preferences.putInt("opCapacity", opCapacity);
+        preferences.putInt("suppress_enable", suppress_enable);
       preferences.end();
   
 }
@@ -211,6 +234,7 @@ void retrivePreferences(){
         opDuration =  preferences.getInt("opDuration", opDuration);
         opState =     preferences.getInt("opState", opState);
         opCapacity =  preferences.getInt("opCapacity", opCapacity);
+        suppress_enable = preferences.getInt("suppress_enable", suppress_enable);
       preferences.end();
   
 }
