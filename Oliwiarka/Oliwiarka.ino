@@ -51,7 +51,10 @@ char bfr[255];
 char c;
 char save = 0;
 char restore = 0;
-char* btName = "Oliwiarka";
+//char* btName = "Oliwiarka";
+char test[20];
+String bt_name = "Oliwiarka";
+char* ptr =test;
 char suppress_enable = 0;
 char Neutral = 0;
 
@@ -61,8 +64,10 @@ void setup() {
   //Serial.println("The device started, now you can pair it with bluetooth!");
   pinMode(22, OUTPUT);
   retrivePreferences();
-  Serial.println(btName);
-  SerialBT.begin(btName); //Bluetooth device name
+  bt_name.toCharArray(test, bt_name.length()+1);
+
+  Serial.println(test);
+  SerialBT.begin(ptr); //Bluetooth device name
   //opState  = opCapacity - opState;
 
   
@@ -84,6 +89,7 @@ void loop() {
   if(incomingByte > 0){
     
     DeserializationError error = deserializeJson(doc, str);
+    JsonObject obj = doc.as<JsonObject>();
     
     if (error) {
       Serial.print(F("deserializeJson() failed: "));
@@ -121,6 +127,14 @@ void loop() {
           }
           
      }
+
+     if (obj["btName"]){
+        Serial.print("new name received ");
+        Serial.println(obj["btName"].as<String>());
+        bt_name = obj["btName"].as<String>();
+      
+     }
+
      
      if(doc["opTime"] > 0){
           if(doc["opTime"] != opTime){
@@ -164,12 +178,7 @@ void loop() {
   }
    incomingByte = 0;
   }
-    /*if(incoming_value != old_value){
-        preferences.begin("my-app", false);
-        preferences.putChar("counter", incoming_value);
-        preferences.end();
-        old_value = incoming_value;
-    }*/
+
     
  
 
@@ -224,6 +233,7 @@ void StorePreferences(){
         preferences.putInt("opState", opState);
         preferences.putInt("opCapacity", opCapacity);
         preferences.putInt("suppress_enable", suppress_enable);
+        preferences.putString("btName", bt_name);
       preferences.end();
   
 }
@@ -235,6 +245,7 @@ void retrivePreferences(){
         opState =     preferences.getInt("opState", opState);
         opCapacity =  preferences.getInt("opCapacity", opCapacity);
         suppress_enable = preferences.getInt("suppress_enable", suppress_enable);
+        bt_name = preferences.getString("btName", bt_name);
       preferences.end();
   
 }
