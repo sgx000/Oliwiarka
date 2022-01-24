@@ -49,6 +49,7 @@ char psettings=0;       //print settings
 char str[255];
 char bfr[255];
 char c;
+int val;
 char save = 0;
 char restore = 0;
 //char* btName = "Oliwiarka";
@@ -63,6 +64,7 @@ void setup() {
   Serial.begin(115200);
   //Serial.println("The device started, now you can pair it with bluetooth!");
   pinMode(22, OUTPUT);
+  pinMode(34, INPUT_PULLUP); 
   retrivePreferences();
   bt_name.toCharArray(test, bt_name.length()+1);
 
@@ -75,15 +77,16 @@ void setup() {
 
 void loop() {
  
-  if (Serial.available()) {
-    SerialBT.write(Serial.read());
-  }
-
   while(SerialBT.available()){
       c = SerialBT.read();
       if(incomingByte < 253){
         str[incomingByte++] = c;
         
+      }
+      if(c == '}'){
+        Serial.println(c);
+      }else{
+        Serial.print(c);
       }
   }
   if(incomingByte > 0){
@@ -97,36 +100,9 @@ void loop() {
       error_cnt++;
  
   }else{ 
-
+     
     
-     if(doc["CMD"] > 0){
-           int cmd = doc["CMD"];
-          Serial.print("Received command: ");
-          switch(cmd){
-            case 1:{
-              Serial.println("Reset");  
-              ESP.restart();  
-            } break;
-            case 9:{
-              Serial.println("Restore settings"); 
-              restore=1; 
-            } break;
-            case 11:{
-              Serial.println("Save settngs");    
-              save = 1;
-            } break;
-            case 15:{
-              Serial.println("Supress lubrication");    
-              suppress_enable = 1;
-            } break;
-            case 16:{
-              Serial.println("Enable lubrication");    
-              suppress_enable = 0;
-            } break;
-            
-          }
-          
-     }
+
 
      if (obj["btName"]){
         Serial.print("new name received ");
@@ -162,6 +138,42 @@ void loop() {
           NotSave = 1;
         }
      }
+     //if(doc["suppress"] > 0){
+        if(doc["suppress"] != suppress_enable){
+          suppress_enable = doc["suppress"];
+          NotSave = 1;
+        }
+     //}
+     
+
+      if(doc["CMD"] > 0){
+           int cmd = doc["CMD"];
+          //Serial.print("Received command: ");
+          switch(cmd){
+            case 1:{
+              //Serial.println("Reset");  
+              ESP.restart();  
+            } break;
+            case 9:{
+              //Serial.println("Restore settings"); 
+              restore=1; 
+            } break;
+            case 11:{
+              //Serial.println("Save settngs");    
+              save = 1;
+            } break;
+            /*case 15:{
+              Serial.println("Supress lubrication");    
+              suppress_enable = 1;
+            } break;
+            case 16:{
+              Serial.println("Enable lubrication");    
+              suppress_enable = 0;
+            } break;*/
+            
+          }
+          
+     }
     if(save>0){
       StorePreferences();
       save=0;
@@ -172,8 +184,8 @@ void loop() {
       NotSave = 0;
       restore = 0;
     }
-    Serial.println(opTime);
-    Serial.println(opDuration);
+    //Serial.println(opTime);
+    //Serial.println(opDuration);
    
   }
    incomingByte = 0;
@@ -184,6 +196,11 @@ void loop() {
 
  
    if (firstTimer.isReady() ) {            // Check is ready a first timer
+    if(digitalRead(34) == HIGH){
+        Neutral = 0;
+    }else{
+        Neutral = 1;
+    }
     if(!suppress_enable){
       if(cnt == opTime){
         if(opState > 0 ){
