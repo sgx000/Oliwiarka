@@ -1,0 +1,7 @@
+{
+    "sketch": "Oliwiarka.ino",
+    "configuration": "PSRAM=disabled,PartitionScheme=Minimal SPIFFS,CPUFreq=80,FlashMode=qio,FlashFreq=40,FlashSize=4M,UploadSpeed=921600,DebugLevel=none",
+    "board": "esp32:esp32:esp32",
+    "output": "build",
+    "port": "COM12"
+}

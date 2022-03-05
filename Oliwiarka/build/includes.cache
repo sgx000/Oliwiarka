@@ -1,0 +1,207 @@
+[
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "C:\\Users\\paszk\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.2\\cores\\esp32"
+  },
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "C:\\Users\\paszk\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.2\\variants\\esp32"
+  },
+  {
+    "Sourcefile": "c:\\Users\\paszk\\OneDrive\\Dokumenty\\GitHub\\Oliwiarka\\Oliwiarka\\build\\sketch\\Oliwiarka.ino.cpp",
+    "Include": "WiFi.h",
+    "Includepath": "C:\\Users\\paszk\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.2\\libraries\\WiFi\\src"
+  },
+  {
+    "Sourcefile": "c:\\Users\\paszk\\OneDrive\\Dokumenty\\GitHub\\Oliwiarka\\Oliwiarka\\build\\sketch\\Oliwiarka.ino.cpp",
+    "Include": "AsyncTCP.h",
+    "Includepath": "C:\\Users\\paszk\\OneDrive\\Dokumenty\\Arduino\\libraries\\AsyncTCP-master\\src"
+  },
+  {
+    "Sourcefile": "c:\\Users\\paszk\\OneDrive\\Dokumenty\\GitHub\\Oliwiarka\\Oliwiarka\\build\\sketch\\Oliwiarka.ino.cpp",
+    "Include": "ESPAsyncWebServer.h",
+    "Includepath": "C:\\Users\\paszk\\OneDrive\\Dokumenty\\Arduino\\libraries\\ESPAsyncWebServer-master\\src"
+  },
+  {
+    "Sourcefile": "c:\\Users\\paszk\\OneDrive\\Dokumenty\\GitHub\\Oliwiarka\\Oliwiarka\\build\\sketch\\Oliwiarka.ino.cpp",
+    "Include": "FS.h",
+    "Includepath": "C:\\Users\\paszk\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.2\\libraries\\FS\\src"
+  },
+  {
+    "Sourcefile": "c:\\Users\\paszk\\OneDrive\\Dokumenty\\GitHub\\Oliwiarka\\Oliwiarka\\build\\sketch\\Oliwiarka.ino.cpp",
+    "Include": "AsyncElegantOTA.h",
+    "Includepath": "C:\\Users\\paszk\\OneDrive\\Dokumenty\\Arduino\\libraries\\AsyncElegantOTA\\src"
+  },
+  {
+    "Sourcefile": "c:\\Users\\paszk\\OneDrive\\Dokumenty\\GitHub\\Oliwiarka\\Oliwiarka\\build\\sketch\\Oliwiarka.ino.cpp",
+    "Include": "Update.h",
+    "Includepath": "C:\\Users\\paszk\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.2\\libraries\\Update\\src"
+  },
+  {
+    "Sourcefile": "c:\\Users\\paszk\\OneDrive\\Dokumenty\\GitHub\\Oliwiarka\\Oliwiarka\\build\\sketch\\Oliwiarka.ino.cpp",
+    "Include": "BluetoothSerial.h",
+    "Includepath": "C:\\Users\\paszk\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.2\\libraries\\BluetoothSerial\\src"
+  },
+  {
+    "Sourcefile": "c:\\Users\\paszk\\OneDrive\\Dokumenty\\GitHub\\Oliwiarka\\Oliwiarka\\build\\sketch\\Oliwiarka.ino.cpp",
+    "Include": "Preferences.h",
+    "Includepath": "C:\\Users\\paszk\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.2\\libraries\\Preferences\\src"
+  },
+  {
+    "Sourcefile": "c:\\Users\\paszk\\OneDrive\\Dokumenty\\GitHub\\Oliwiarka\\Oliwiarka\\build\\sketch\\Oliwiarka.ino.cpp",
+    "Include": "SimpleTimer.h",
+    "Includepath": "C:\\Users\\paszk\\OneDrive\\Dokumenty\\Arduino\\libraries\\SimpleTimer"
+  },
+  {
+    "Sourcefile": "c:\\Users\\paszk\\OneDrive\\Dokumenty\\GitHub\\Oliwiarka\\Oliwiarka\\build\\sketch\\Oliwiarka.ino.cpp",
+    "Include": "ArduinoJson.h",
+    "Includepath": "C:\\Users\\paszk\\OneDrive\\Dokumenty\\Arduino\\libraries\\ArduinoJson\\src"
+  },
+  {
+    "Sourcefile": "c:\\Users\\paszk\\OneDrive\\Dokumenty\\GitHub\\Oliwiarka\\Oliwiarka\\build\\sketch\\Oliwiarka.ino.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\paszk\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.2\\libraries\\WiFi\\src\\WiFi.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\paszk\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.2\\libraries\\WiFi\\src\\WiFiAP.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\paszk\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.2\\libraries\\WiFi\\src\\WiFiClient.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\paszk\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.2\\libraries\\WiFi\\src\\WiFiGeneric.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\paszk\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.2\\libraries\\WiFi\\src\\WiFiMulti.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\paszk\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.2\\libraries\\WiFi\\src\\WiFiSTA.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\paszk\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.2\\libraries\\WiFi\\src\\WiFiScan.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\paszk\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.2\\libraries\\WiFi\\src\\WiFiServer.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\paszk\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.2\\libraries\\WiFi\\src\\WiFiUdp.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\paszk\\OneDrive\\Dokumenty\\Arduino\\libraries\\AsyncTCP-master\\src\\AsyncTCP.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\paszk\\OneDrive\\Dokumenty\\Arduino\\libraries\\ESPAsyncWebServer-master\\src\\AsyncEventSource.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\paszk\\OneDrive\\Dokumenty\\Arduino\\libraries\\ESPAsyncWebServer-master\\src\\AsyncWebSocket.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\paszk\\OneDrive\\Dokumenty\\Arduino\\libraries\\ESPAsyncWebServer-master\\src\\SPIFFSEditor.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\paszk\\OneDrive\\Dokumenty\\Arduino\\libraries\\ESPAsyncWebServer-master\\src\\WebAuthentication.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\paszk\\OneDrive\\Dokumenty\\Arduino\\libraries\\ESPAsyncWebServer-master\\src\\WebHandlers.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\paszk\\OneDrive\\Dokumenty\\Arduino\\libraries\\ESPAsyncWebServer-master\\src\\WebRequest.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\paszk\\OneDrive\\Dokumenty\\Arduino\\libraries\\ESPAsyncWebServer-master\\src\\WebResponses.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\paszk\\OneDrive\\Dokumenty\\Arduino\\libraries\\ESPAsyncWebServer-master\\src\\WebServer.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\paszk\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.2\\libraries\\FS\\src\\FS.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\paszk\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.2\\libraries\\FS\\src\\vfs_api.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\paszk\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.2\\libraries\\Update\\src\\HttpsOTAUpdate.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\paszk\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.2\\libraries\\Update\\src\\Updater.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\paszk\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.2\\libraries\\BluetoothSerial\\src\\BTAddress.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\paszk\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.2\\libraries\\BluetoothSerial\\src\\BTAdvertisedDeviceSet.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\paszk\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.2\\libraries\\BluetoothSerial\\src\\BTScanResultsSet.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\paszk\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.2\\libraries\\BluetoothSerial\\src\\BluetoothSerial.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\paszk\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.2\\libraries\\Preferences\\src\\Preferences.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\paszk\\OneDrive\\Dokumenty\\Arduino\\libraries\\SimpleTimer\\SimpleTimer.cpp",
+    "Include": "",
+    "Includepath": null
+  }
+]
